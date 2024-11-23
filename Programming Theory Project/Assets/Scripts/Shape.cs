@@ -8,9 +8,10 @@ public class Shape : MonoBehaviour
     [SerializeField] private protected Renderer rendrer;
     [SerializeField] private protected GameObject displayedText;
     [SerializeField] private protected TMP_Text textToDisplay;
+    
     private string shapeClassF;
 
-    public string shapeClassP
+    public string shapeClassP //ENCAPSULATION
     {
         get { return shapeClassF; }
         set { shapeClassF = value; }
@@ -28,13 +29,13 @@ public class Shape : MonoBehaviour
         
     }
 
-    protected virtual void ChangeColor()
+    protected virtual void ChangeColor() //ABSTRACTION
     {
         //Debug.Log("ChangeColor Method Accessed");
         rendrer.material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1.0f);
     }
 
-    protected virtual void DisplayText()
+    protected virtual void DisplayText() //ABSTRACTION
     {
         //Debug.Log("DisplayText Method Accessed");
         displayedText.SetActive(true);
