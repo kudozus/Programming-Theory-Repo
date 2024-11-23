@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ReadInput : MonoBehaviour
 {
@@ -22,5 +23,6 @@ public class ReadInput : MonoBehaviour
     {
         input = s;
         Debug.Log(input);
+        SceneManager.LoadScene(1);
     }
 }
